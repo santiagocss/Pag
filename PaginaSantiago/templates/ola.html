@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MULTIVERSE PROJECT</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>MI MUNDO VIRTUAL</h1>
+        <nav>
+            <a href="#intro">Inicio</a>
+            <a href="#gallery">Galería</a>
+            <a href="#personajes">Personajes</a> 
+            <a href="#details">Detalles</a>
+            <a href="{{ url_for('logout') }}">Cerrar Sesión</a>
+        </nav>
+    </header>
+
+    <section id="intro" class="intro">
+        <h2>BIENVENIDOS A ESTA MARAVILLOSA EXPERIENCIA EN VR</h2>
+        <p>En esta página observamos diverso contenido sobre el proyecto
+        así como información de contacto.
+        DISFRUTA ESTA MARAVILLOSA EXPERIENCIA, ¡NOS VEMOS PRONTO!</p>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <h2>Galería</h2>
+        <div class="image-gallery">
+            <img src="{{ url_for('static', filename='images/Igloo.jpeg') }}" alt="Imagen 1">
+            <p>Antártida...</p>
+            <img src="{{ url_for('static', filename='images/portal.jpeg') }}" alt="Imagen 2">
+            <p>Portal...</p>
+            <img src="{{ url_for('static', filename='images/acuario.jpeg') }}" alt="Imagen 3">
+            <p>Acuarios...</p>
+            <img src="{{ url_for('static', filename='images/desierto.jpeg') }}" alt="Imagen 4">
+            <p>Desiertos...</p>
+            <img src="{{ url_for('static', filename='images/desierto (2).jpeg') }}" alt="Imagen 5">
+            <p>Desierto...</p>
+            <img src="{{ url_for('static', filename='images/pinguinos.jpeg') }}" alt="Imagen 6">
+            <p>Pinguinos...</p>
+            <img src="{{ url_for('static', filename='images/piramides.jpeg') }}" alt="Imagen 7">
+            <p>Piramides...</p>
+        </div>
+    </section>
+
+    <section id="personajes" class="personajes">
+        <h2>Personajes</h2>
+        <div class="personaje">
+            <img src="{{ url_for('static', filename='images/personaje1.jpeg') }}" alt="Personaje 1" onclick="playSound('sound1')">
+            <div class="texto">
+                <h3>Cacti</h3>
+                <p>Él está en el multiverso Stranixt, es un desierto igual que en la tierra solo con algunas diferencias. 
+                A él le agradan las visitas, es servicial y empático. Cuando está feliz, mueve sus antenas.</p>
+            </div>
+        </div>
+        <div class="personaje">
+            <img src="{{ url_for('static', filename='images/personaje2.jpeg') }}" alt="Personaje 2" onclick="playSound('sound2')">
+            <div class="texto">
+                <h3>Pingu</h3>
+                <p>Este personaje de este ecosistema nos dará un recorrido en cuanto cm es el lugar donde habita y la importancia de el.</p>
+            </div>
+        </div>
+    </section>
+
+    <audio id="sound1" src="{{ url_for('static', filename='audio/cacti-sound.mp3') }}"></audio>
+    <audio id="sound2" src="{{ url_for('static', filename='audio/pingu-sound.mp3') }}"></audio>
+
+    <section id="details" class="details">
+        <h2>MAS INFORMACION</h2>
+        <h3>REDES SOCIALES</h3>
+        <h4>SÍGUENOS!!! (por favor)</h4>
+        <div class="social-media"> 
+            <a href="https://www.instagram.com/mult.iverso6?igsh=MWRrYnl5ZHBzdnhqeg%3D%3D&utm_source=qr" target="_blank">
+                <img src="{{ url_for('static', filename='images/Instagram.jpg') }}" alt="Instagram" width="50" height="50">
+            </a>
+            <a href="https://www.facebook.com/share/VAM8vEMh6435JpTL/?mibextid=LQQJ4d" target="_blank">
+                <img src="{{ url_for('static', filename='images/Facebook1.jpeg') }}" alt="Facebook" width="50" height="50">
+            </a>
+            <a href="https://www.tiktok.com/@multiverso_7?_t=8pugyTC1OVC&_r=1" target="_blank">
+                <img src="{{ url_for('static', filename='images/TikTok.jpeg') }}" alt="TikTok" width="50" height="50">
+            </a>
+        </div>
+    </section>
+
+    <script>
+        function logout() {
+            console.log("Cerrando sesión");
+        }
+
+        function playSound(audioId) {
+            const audio = document.getElementById(audioId);
+            if (audio) {
+                audio.play();
+            }
+        }
+    </script>
+
+    <footer id="footer">
+        <p>&copy; multiverse project. Todos los derechos reservados.</p>
+        <p><a id="apk-link" href="{{ url_for('static', filename='downloads/tu-app.apk') }}" download>Conoce nuestro mundo dando click aquí</a></p>
+    </footer>
+</body>
+</html>

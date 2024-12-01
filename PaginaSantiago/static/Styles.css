@@ -1,0 +1,169 @@
+body {
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Bubblegum Sans', sans-serif; 
+    margin: 0;
+    padding: 0;
+    color: #f0f0f0;
+    background-image: url("images/asd.jpeg");
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+}
+
+header {
+    background-color: #001f3f; 
+    color: #ffffff; 
+    padding: 1rem;
+    text-align: center;
+}
+
+nav {
+    margin: 0 auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    color: #61dafb; 
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; 
+}
+
+nav a:hover {
+    color: #ffffff; 
+    transform: scale(1.1); 
+}
+
+section {
+    padding: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.intro, .gallery, .details, .personajes {
+    margin-bottom: 2rem;
+    transition: background-color 0.3s; 
+}
+
+.intro:hover, .gallery:hover, .details:hover, .personajes:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+}
+
+.gallery img, .personaje img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s;
+}
+
+.gallery img:hover, .personaje img:hover {
+    transform: scale(1.05); 
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.personajes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.personaje {
+    flex: 1;
+    min-width: calc(33% - 1rem);
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.personaje:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.texto {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffffff;
+    padding: 10px;
+    transition: opacity 0.3s;
+    opacity: 0;
+}
+
+.personaje:hover .texto {
+    opacity: 1;
+}
+
+.details {
+    background-color: rgba(255, 255, 255, 0.1); 
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center; 
+}
+
+.social-media {
+    display: flex; 
+    justify-content: center; 
+    gap: 10px; 
+}
+
+footer {
+    background-color: #001f3f; 
+    color: #ffffff; 
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    bottom: 0;
+}
+
+.image-gallery img {
+    width: 550px;
+    height: 400px;
+    transition: transform 0.3s; 
+}
+
+#footer {
+    bottom: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+h1, h2, h3, p {
+    font-family: 'Bubblegum Sans', sans-serif; 
+    transition: transform 0.3s, color 0.3s; 
+}
+
+h1:hover, h2:hover, h3:hover, p:hover {
+    transform: scale(1.05); 
+    color: #61dafb; 
+}
+
+.details a img {
+    transition: transform 0.3s; 
+}
+
+.details a img:hover {
+    transform: scale(1.1); 
+}
+
