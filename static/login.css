@@ -1,0 +1,108 @@
+body {
+    font-family: 'Bubblegum Sans', sans-serif; 
+    background-color: #f0f0f0;
+    background-image: url("images/piramides.jpeg"); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    animation: fadeIn 1s; 
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.login-container {
+    background-color: rgba(255, 255, 255, 0.8); 
+    backdrop-filter: blur(10px);
+    padding: 40px 20px; 
+    border-radius: 12px; 
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3); 
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+.login-container:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.4); 
+}
+
+h1 {
+    margin: 0 0 20px; 
+    font-size: 24px;
+    color: #333;
+    transition: color 0.3s, transform 0.3s; 
+}
+
+h1:hover {
+    color: #4CAF50; 
+    transform: scale(1.1); 
+}
+
+input[type="text"], input[type="password"] {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: border 0.3s, box-shadow 0.3s; 
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    border-color: #4CAF50; 
+    outline: none; 
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.5); 
+}
+
+input[type="button"] {
+    width: 90%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s; 
+    box-shadow: 0px 4px 10px rgba(76, 175, 80, 0.4);
+}
+
+input[type="button"]:hover {
+    background-color: #45a049; 
+    transform: translateY(-2px); 
+    box-shadow: 0px 6px 15px rgba(76, 175, 80, 0.6);
+}
+
+input[type="text"], input[type="password"] {
+    animation: slideIn 0.5s;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.login-container {
+    animation: fadeIn 0.8s; 
+}
+
